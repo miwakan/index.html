@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="refresh" content="0;url=https://miwakan.github.io/shinkanpanf/shinkanpanf_2025_2.0.0.pdf#page=1">
   <title>リダイレクト</title>
+  <script>
+    window.onload = function() {
+      var url = "https://miwakan.github.io/shinkanpanf/shinkanpanf_2025_2.0.0.pdf#page=1";
+      var timestamp = new Date().getTime(); // 現在の時刻をクエリパラメータに
+      window.location.href = url + (url.includes('?') ? '&' : '?') + "nocache=" + timestamp;
+    };
+  </script>
 </head>
 <body>
-  <p>リダイレクト中... 移動しない場合は<a href="https://miwakan.github.io/shinkanpanf/shinkanpanf_2025_2.0.0.pdf#page=1">こちら</a>をクリック。</p>
+  <p>リダイレクト中... 移動しない場合は<a id="redirectLink" href="#">こちら</a>をクリック。</p>
+  <script>
+    document.getElementById("redirectLink").href = "https://miwakan.github.io/shinkanpanf/shinkanpanf_2025_2.0.0.pdf#page=1" + "?nocache=" + new Date().getTime();
+  </script>
 </body>
 </html>
